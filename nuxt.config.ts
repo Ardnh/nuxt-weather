@@ -7,7 +7,8 @@ export default defineNuxtConfig({
         public: {
             weatherAppApiUrl: process.env.NUXT_WEATHER_APP_API_URL,
             weatherAppApiKey: process.env.NUXT_WEATHER_APP_API_KEY,
-            geoDbAppApiUrl: process.env.NUXT_GEODB_APP_API_URL
+            geoDbAppApiUrl: process.env.NUXT_GEODB_APP_API_URL,
+            restCountryAppApiUrl: process.env.NUXT_RESTCOUNTRY_APP_API_URL
         }
     },
     css: [

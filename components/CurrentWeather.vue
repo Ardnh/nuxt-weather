@@ -12,7 +12,7 @@
             <div class="bg-bluegray-900 p-5 border-round-xl h-15rem">
                 <div class="text-lg text-bluegray-500">Temperature</div>
                 <div class="text-6xl font-bold mt-4">{{ props.current.temp_c }} &#8451;</div>
-                <!-- <div class="mt-2 mb-0">{{ props.current.condition.text }}</div> -->
+                <div class="mt-2 mb-0">{{ props.current.condition?.text }}</div>
             </div>
         </div>
         <div class="md:col-4 col-12">

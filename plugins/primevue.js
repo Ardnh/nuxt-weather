@@ -13,6 +13,7 @@ import ToastService from 'primevue/toastservice';
 import Toast from 'primevue/toast';
 import Chip from 'primevue/chip';
 import InputText from 'primevue/inputtext'
+import Fieldset from 'primevue/fieldset'
 
 export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.vueApp.use(PrimeVue, { ripple: true });
@@ -27,6 +28,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.vueApp.component("Toast", Toast)
     nuxtApp.vueApp.component("Chip", Chip)
     nuxtApp.vueApp.component("InputText", InputText)
+    nuxtApp.vueApp.component("Fieldset", Fieldset)
     nuxtApp.vueApp.directive("tooltip", Tooltip)
     //other components that you need
 });

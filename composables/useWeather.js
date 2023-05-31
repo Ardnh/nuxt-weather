@@ -1,11 +1,12 @@
 export const useWeather = () => {
     const { weatherAppUrl, weatherAppApiKey } = useRuntime()
-    const weatherData = ref({})
-    const astronomicalData = reactive({})
+    const weatherData = ref(null)
+    const astronomicalData = ref(null)
 
     const fetchCurrentWeather = async (latitude, longitude, name) => {
         const date = new Date().toJSON().slice(0,10)
         const query = name !== null ? name : `${ latitude + ',' + longitude }`
+        weatherData.value = null
     
         const { data: currentWeather } = await useFetch(`${weatherAppUrl + "current.json"}`, {
             // server: false,
@@ -24,6 +25,7 @@ export const useWeather = () => {
     const fetchAstronomicalTime = async (latitude, longitude, name) => {
         const date = new Date().toJSON().slice(0,10)
         const query = name !== null ? name : `${ latitude + ',' + longitude }`
+        astronomicalData.value = null
 
         const { data: astronomicalTime } = await useFetch(`${weatherAppUrl + "astronomy.json"}`, {
             // server: false,
@@ -35,7 +37,8 @@ export const useWeather = () => {
             }
         })
 
-        astronomicalData.value = astronomicalTime.value.astronomy.astro
+        astronomicalData.value = astronomicalTime.value?.astronomy?.astro
+        console.log(astronomicalTime.value?.astronomy?.astro)
     }
 
     return {

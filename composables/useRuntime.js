@@ -3,10 +3,12 @@ export const useRuntime = () => {
     const weatherAppUrl = runtimeConfig.weatherAppApiUrl
     const weatherAppApiKey = runtimeConfig.weatherAppApiKey
     const geoDbAppUrl = runtimeConfig.geoDbAppApiUrl
+    const restCountryAppApiUrl = runtimeConfig.restCountryAppApiUrl
 
     return {
         weatherAppUrl,
         weatherAppApiKey,
-        geoDbAppUrl
+        geoDbAppUrl,
+        restCountryAppApiUrl
     }
 }

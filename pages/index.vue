@@ -7,7 +7,7 @@
                 <div class="">
                     <div class="md:text-8xl md:text-left text-center text-5xl font-bold">WeNews</div>
                     <div class="md:text-3xl md:text-left text-center text-2xl font-normal">Your daily weather news</div>
-                    <Button class="mt-3 w-full text-white font-bold" label="Explore" size="small"/>
+                    <Button @click="goToExplore" class="z-0 mt-3 w-full text-white font-bold" label="Explore" size="small"/>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
                     <div class="flex justify-content-center">
                         <ProgressSpinner/>
                     </div>
-                    <div class="text-center text-xl text-bluegray-500">Fetching data...</div>
+                    <div class="text-center text-xl text-bluegray-500">Loading...</div>
                 </div>
                 <div v-if="currentWeather === null" class="mx-auto w-30rem">
                     <p class="text-center">
@@ -54,7 +54,7 @@
                             <AirQuality :air="airQuality"/>
                         </TabPanel>
                         <TabPanel header="Astronomy">
-                            <AstronomicalTime :astronomy="asData"/>
+                            <AstronomicalTime :astronomy="astronomicalData"/>
                         </TabPanel>
                     </TabView>
                 </div>
@@ -75,7 +75,7 @@ const locationPermission = ref(false)
 const currentWeather = ref(null)
 const locationWeather = ref(null)
 const airQuality = ref(null)
-const asData = ref({})
+const asData = ref(null)
 const isLoading = ref(false)
 const nearby = ref(null)
 const weatherList = ref([
@@ -112,8 +112,12 @@ const weatherList = ref([
 ])
 
 useHead({
-    title: "Weather news app"
+    title: "Home | Weather news app"
 })
+
+const goToExplore = () => {
+    navigateTo("/explore")
+}
 
 const getLocation = () => {
     if (navigator.geolocation) {
