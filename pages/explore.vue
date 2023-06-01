@@ -7,10 +7,10 @@
                 <form class="text-center">
                     <span class="p-input-icon-left">
                         <i class="pi pi-search" />
-                        <InputText v-model="query" placeholder="ex: Japan" />
+                        <InputText class="md:w-26rem w-18rem" v-model="query" placeholder="ex: Japan" />
                     </span>
                 </form>
-                <div class="flex flex-wrap justify-content-center" :class="isTranslate ? 'mx-3' : 'mt-3'">
+                <div class="flex flex-wrap justify-content-center" :class="isTranslate ? 'mx-3 md:mt-0 mt-3' : 'mt-3'">
                     <Button @click="getData" :disabled="query ===''" label="Search" />
                 </div>
             </div>
@@ -23,7 +23,7 @@
         <div class="text-center text-xl text-bluegray-500">Loading...</div>
     </div>
     <div v-if="weatherData !== null" class="my-5">
-        <div class="p-4 my-4 border-round-xl mx-7">
+        <div class="p-4 my-4 border-round-xl md:mx-7 mx-2">
             <div class="grid">
                 <div class="md:col-3 col-12">
                     <div class="border-round-xl bg-bluegray-900 p-4">
@@ -59,11 +59,11 @@
                 </div>
             </div>
         </div>
-        <div class="p-4 mx-7 my-4 bg-bluegray-900 border-round-xl">
+        <div class="p-4 md:mx-7 mx-2 my-4 bg-bluegray-900 border-round-xl">
             <ExploreWeatherData :weather="weatherData" />
         </div>
         <AstronomicalTime :astronomy="astronomicalData"/>
-        <div class="my-4 mx-7">
+        <div class="my-4 md:mx-7 mx-2">
             <div v-if="countryData === null" class="flex flex-wrap justify-content-center">
                 <Button @click="getCountryDetail(weatherData.location?.country)" label="Country details" class="mx-auto mb-4"/>
             </div>
@@ -123,7 +123,6 @@ const getData = async () => {
 <style scoped>
 .p-inputtext{
     background-color: #040D19;
-    width: 30rem;
 }
 
 .p-fieldset {

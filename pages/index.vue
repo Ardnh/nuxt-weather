@@ -3,7 +3,7 @@
     
     <div class="mt-4 grid">
         <div class="col-12 md:col-6">
-            <div class="flex flex-wrap md:align-content-center md:justify-content-start justify-content-center md:h-30rem ml-0 md:ml-8">
+            <div class="flex flex-wrap md:align-content-center md:justify-content-start justify-content-center md:h-30rem md:mt-1 mt-8 ml-0 md:ml-8">
                 <div class="">
                     <div class="md:text-8xl md:text-left text-center text-5xl font-bold">WeNews</div>
                     <div class="md:text-3xl md:text-left text-center text-2xl font-normal">Your daily weather news</div>
@@ -44,8 +44,8 @@
                         <Button @click="getLocation" class="mt-3 text-white font-bold" label="Allow access location" size="small"/>
                     </div>
                 </div>
-                <div v-else class="border-round-xl md:mx-8">
-                    <div class="text-4xl">Today's Highlights</div>
+                <div v-else class="border-round-xl md:mx-7">
+                    <div class="text-4xl md:text-left text-center">Today's Highlights</div>
                     <TabView class="mt-5">
                         <TabPanel header="Today">
                             <CurrentWeather :current="currentWeather" :location="locationWeather" />
@@ -61,7 +61,7 @@
             </div>
         </div>
         <div class="col-12">
-            <div v-if="locationWeather !== null" class="mx-8 mt-4 mb-3 text-4xl">City near {{ locationWeather.name }}</div>
+            <div v-if="locationWeather !== null" class="md:mx-8 mx-2 mt-4 mb-3 text-4xl md:text-left text-center">City near {{ locationWeather.name }}</div>
             <NearbyCities :nearby="nearbyCities" />
         </div>
     </div>

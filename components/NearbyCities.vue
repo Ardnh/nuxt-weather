@@ -1,5 +1,5 @@
 <template>
-    <div v-if="props.nearby !== null" class="flex flex-wrap justify-content-center mx-7">
+    <div v-if="props.nearby !== null" class="flex flex-wrap justify-content-center md:mx-7 mx-3">
         <div v-for="item in props.nearby" :key="item.id" @click="fetchCurrentWeather(item)" class="cursor-pointer p-3 m-2 w-23rem hover:cursor-pointer border-round-xl bg-bluegray-900">
             <div class="text-3xl font-bold">{{ item.name }}</div>
             <div class="flex flex-wrap align-items-center bg-gray-900 mx-2 my-1 text-md border-round-xl">

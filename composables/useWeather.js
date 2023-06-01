@@ -38,7 +38,6 @@ export const useWeather = () => {
         })
 
         astronomicalData.value = astronomicalTime.value?.astronomy?.astro
-        console.log(astronomicalTime.value?.astronomy?.astro)
     }
 
     return {

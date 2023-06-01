@@ -1,7 +1,9 @@
 <template>
-    <div class="mx-4 mt-4">
-        <div class="text-xl font-bold">Welcome to About</div>
-        <div class="text-md font-normal mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione eum asperiores unde saepe!</div>
+    <div class="flex flex-wrap justify-content-center md:align-items-center md:mt-0 mt-8 align-items-start w-full h-screen">
+        <div class="flex flex-wrap justify-content-center align-items-end">
+            <img src="/nuxt.svg" width="100">
+            <div class="text-7xl font-bold">Nuxt</div>
+        </div>
     </div>
 </template>
 <script setup>

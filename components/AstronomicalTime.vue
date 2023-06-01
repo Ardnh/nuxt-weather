@@ -1,7 +1,7 @@
 <template>
-    <div v-if="props.astronomy !== null" class="my-4 border-round-xl bg-bluegray-900 p-4 mx-7">
+    <div v-if="props.astronomy !== null" class="my-4 border-round-xl bg-bluegray-900 p-4 md:mx-5 mx-1">
         <div class="grid">
-            <div class="col-4 flex flex-wrap justify-content-center">
+            <div class="md:col-4 col-12 flex flex-wrap justify-content-center">
                 <div class="bg-gray-900 m-3 border-round-2xl p-3 w-20rem h-25rem">
                     <img :src=" props.astronomy?.is_sun_up === 0 ? '/night.svg' : '/day.svg'" width="270" height="270" class="ml-2">
                     <div v-if="props.astronomy?.is_sun_up === 0">
@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-8">
+            <div class="md:col-8 col-12">
                 <div class="mt-7 mx-4 text-4xl font-bold">Astronomical Time</div>
                 <div class="mx-4 text-base font-light">Astronomical Time is based on the repetition of astronomical events for setting frequency standards.</div>
                 <div class="flex mt-8 flex-wrap justify-content-start align-items-center">
