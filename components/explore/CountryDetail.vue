@@ -26,33 +26,54 @@
         <div class="bg-gray-900 border-round-xl p-5">
             <div class="grid mt-2">
                 <div class="col-3">
-                    <div>
+                    <div class="m-3">
                         <div class="text-2xl">{{ props.country[0].capital[0] }}</div>
                         <div class="text-base text-bluegray-400 mt-4">Capital</div>
                     </div>
                 </div>
                 <div class="col-3">
-                    <div>
+                    <div class="m-3">
                         <div class="text-2xl">{{ props.country[0].region }}</div>
                         <div class="text-base text-bluegray-400 mt-4">Region</div>
                     </div>
                 </div>
                 <div class="col-3">
-                    <div>
+                    <div class="m-3">
                         <div class="text-2xl">{{ props.country[0].subregion }}</div>
                         <div class="text-base text-bluegray-400 mt-4">Sub Region</div>
                     </div>
                 </div>
                 <div class="col-3">
-                    <div>
+                    <div class="m-3">
                         <div class="text-2xl">{{ props.country[0].latlng[0] }} / {{ props.country[0].latlng[1] }}</div>
                         <div class="text-base text-bluegray-400 mt-4">Lat / Lon</div>
                     </div>
                 </div>
+                <div class="col-3">
+                    <div class="m-3">
+                        <div class="text-2xl">{{ props.country[0].population }}</div>
+                        <div class="text-base text-bluegray-400 mt-4">Population</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="m-3">
+                        <div class="text-2xl">{{ props.country[0].area }}</div>
+                        <div class="text-base text-bluegray-400 mt-4">Area</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="m-3">
+                        <div class="text-2xl">{{ props.country[0].continents[0]}}</div>
+                        <div class="text-base text-bluegray-400 mt-4">Continents</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="m-3">
+                        <div class="text-2xl">{{ props.country[0].timezones[0] }}</div>
+                        <div class="text-base text-bluegray-400 mt-4">Timezones</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="m-3 p-3 grid bg-gray-900">
-            {{ props.country }}
         </div>
     </Fieldset>
 </template>

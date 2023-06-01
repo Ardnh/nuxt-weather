@@ -68,7 +68,7 @@
                 <Button @click="getCountryDetail(weatherData.location?.country)" label="Country details" class="mx-auto mb-4"/>
             </div>
             <div v-if="isCountryLoading">
-                <div class="flex flex-wrap justify-content-center">
+                <div class="flex flex-wrap mt-5 justify-content-center">
                     <ProgressSpinner/>
                 </div>
                 <div class="text-bluegray-900 text-center text-xl">Loading...</div>
