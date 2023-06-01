@@ -48,7 +48,7 @@
                     <div class="text-4xl md:text-left text-center">Today's Highlights</div>
                     <TabView class="mt-5">
                         <TabPanel header="Today">
-                            <CurrentWeather :current="currentWeather" :location="locationWeather" />
+                            <CurrentWeather v-if="currentWeather !== null && locationWeather !== null" :current="currentWeather" :location="locationWeather" />
                         </TabPanel>
                         <TabPanel header="Air Quality">
                             <AirQuality :air="airQuality"/>
@@ -146,18 +146,16 @@ const showPosition = async (position) => {
         toast.add({ severity: 'error', summary: 'Error', detail: err.message, life: 3000 });
     })
 
-    currentWeather.value = weatherData.value.current
-    locationWeather.value = weatherData.value.location
-    airQuality.value = weatherData.value.current.air_quality
-    asData.value = astronomicalData.value.astronomy
-    nearby.value = nearbyCities.value.data
+    currentWeather.value = weatherData.value?.current
+    locationWeather.value = weatherData.value?.location
+    airQuality.value = weatherData.value?.current?.air_quality
+    asData.value = astronomicalData.value?.astronomy
+    nearby.value = nearbyCities.value?.data
 }
 
 onMounted(() => {
     if (currentWeather.value === null){
         getLocation()
     }
-
-    console.log("on Mounted home run")
 })
 </script>
