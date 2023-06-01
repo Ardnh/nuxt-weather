@@ -18,10 +18,10 @@
                     <template #item="slotProps">
                         <div class="m-2 text-center py-5 px-3">
                             <div class="mb-1">
-                                <img :src="slotProps.data.icon" class="w-18rem" />
+                                <img :src="slotProps.data?.icon" class="w-18rem" />
                             </div>
                             <div>
-                                <h4 class="mb-1 text-2xl">{{ slotProps.data.text }}</h4>
+                                <h4 class="mb-1 text-2xl">{{ slotProps.data?.text }}</h4>
                             </div>
                         </div>
                     </template>
