@@ -53,12 +53,12 @@
                         <TabPanel header="Air Quality">
                             <AirQuality :air="airQuality"/>
                         </TabPanel>
-                        <TabPanel header="Astronomy">
-                            <AstronomicalTime :astronomy="astronomicalData"/>
-                        </TabPanel>
                     </TabView>
                 </div>
             </div>
+        </div>
+        <div class="my-3">
+            <AstronomicalTime :astronomy="astronomicalData"/>
         </div>
         <div class="col-12">
             <div v-if="locationWeather !== null" class="md:mx-8 mx-2 mt-4 mb-3 text-4xl md:text-left text-center">City near {{ locationWeather.name }}</div>

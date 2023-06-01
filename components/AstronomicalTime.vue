@@ -1,5 +1,5 @@
 <template>
-    <div v-if="props.astronomy !== null" class="my-4 border-round-xl bg-bluegray-900 p-4 md:mx-5 mx-1">
+    <div v-if="props.astronomy !== null" class="my-4 border-round-xl bg-bluegray-900 p-4 md:mx-7 mx-1">
         <div class="grid">
             <div class="md:col-4 col-12 flex flex-wrap justify-content-center">
                 <div class="bg-gray-900 m-3 border-round-2xl p-3 w-20rem h-25rem">
