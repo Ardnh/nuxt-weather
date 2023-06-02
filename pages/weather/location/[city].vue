@@ -1,10 +1,12 @@
 <template>
     <Toast/>
-    <div v-if="isLoading" class="mx-auto mt-7">
-        <div class="flex justify-content-center">
-            <ProgressSpinner/>
+    <div v-if="isLoading" class="flex flex-wrap w-full h-screen justify-content-center align-items-center">
+        <div>
+            <div class="flex justify-content-center">
+                <ProgressSpinner/>
+            </div>
+            <div class="text-center text-xl text-bluegray-500">Loading...</div>
         </div>
-        <div class="text-center text-xl text-bluegray-500">Fetching data...</div>
     </div>
     <div v-else class="mt-7">
         <div v-if="cityData !== null" class="my-4 border-round-xl bg-bluegray-900 p-4 mx-7">

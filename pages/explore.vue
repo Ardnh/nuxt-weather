@@ -16,11 +16,13 @@
             </div>
         </div>
     </div>
-    <div v-if="isLoading" class="">
-        <div class="flex justify-content-center">
-            <ProgressSpinner/>
+    <div v-if="isLoading" class="flex flex-wrap w-full h-screen justify-content-center align-items-center">
+        <div>
+            <div class="flex justify-content-center">
+                <ProgressSpinner/>
+            </div>
+            <div class="text-center text-xl text-bluegray-500">Loading...</div>
         </div>
-        <div class="text-center text-xl text-bluegray-500">Loading...</div>
     </div>
     <div v-if="weatherData !== null" class="my-5">
         <div class="p-4 my-4 border-round-xl md:mx-7 mx-2">
@@ -67,11 +69,13 @@
             <div v-if="countryData === null" class="flex flex-wrap justify-content-center">
                 <Button @click="getCountryDetail(weatherData.location?.country)" label="Country details" class="mx-auto mb-4"/>
             </div>
-            <div v-if="isCountryLoading">
-                <div class="flex flex-wrap mt-5 justify-content-center">
-                    <ProgressSpinner/>
+            <div v-if="isCountryLoading" class="flex flex-wrap w-full h-screen justify-content-center align-items-center">
+                <div>
+                    <div class="flex justify-content-center">
+                        <ProgressSpinner/>
+                    </div>
+                    <div class="text-center text-xl text-bluegray-500">Loading...</div>
                 </div>
-                <div class="text-bluegray-900 text-center text-xl">Loading...</div>
             </div>
             <ExploreCountryDetail v-if="countryData !== null" :country="countryData"/>
         </div>

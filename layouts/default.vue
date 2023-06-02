@@ -35,4 +35,8 @@ const items = ref([
 *{
   font-family: 'Nunito';
 }
+.bg-base {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(8,46,82,1) 54%, rgba(14,69,121,1) 100%);
+}
 </style>

@@ -16,7 +16,7 @@ export const useLocation = () => {
             method: "GET",
         })
 
-        nearbyCities.value = nearby.value.data
+        nearbyCities.value = nearby.value?.data
     }
 
     const fetchCityDetail = async (id) => {
@@ -27,7 +27,7 @@ export const useLocation = () => {
             method: "GET",
         })
 
-        cityData.value = city.value.data
+        cityData.value = city.value?.data
     }
 
     const fetchCountryDetail = async (name) => {
